@@ -16,14 +16,28 @@ The program defines a class `Demo` with:
    - Initialize an instance variable `status` with the value `"Alive"`.
    - Print the value of `status`.
 3. Define the `__del__` method:
+4. 
    - Print a message indicating the object is being destroyed.
-4. Outside the class:
+5. Outside the class:
    - Create an instance of the `Demo` class.
    - Delete the object using the `del` keyword.
 ## Program
-Add code Here
+~~~
+class Demo:
+    def __init__(self):
+        self.status = "Alive"
+        print("Status:", self.status)
+    
+    def __del__(self):
+        print("Object is being destroyed")
 
+obj = Demo()
+del obj
+~~~
 ## 🧪 Output
-
+~~~
+Status: Alive
+Object is being destroyed
+~~~
 ## Result
-
+THe program is verified
